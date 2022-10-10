@@ -45,9 +45,73 @@
             </div>
         </nav>
     </header>
+    <hr >
 
     <main>
-
+        <div class="container mt-5 w-50">
+            <h1 class="text-center">Create an account</h1>
+            <form >
+                <div class="row text-center">
+                    <div class="col-sm-6 form-floating mb-4 ">
+                       <input type="text" class="form-control" id="first" placeholder="Hello">
+                       <label for="first" class="form-label">First name</label>
+                    </div>
+                    <div class="col-sm-6 form-floating">
+                        <input type="text" class="form-control" id="last" placeholder="Bye">
+                        <label for="last" class="form-label">Last name</label>
+                    </div>
+                 
+                    <div class="col-12 form-floating">
+                        <input type="email" id="email" class="form-control" placeholder="@example.com">
+                        <label for="email" class="form-label">Email</label>
+    
+                    </div>
+                    
+                    <div class="col-12 form-floating mt-4">
+                        <input type="email" id="emailConfirm" class="form-control" placeholder="@example.com">
+                        <label for="emailConfirm" class="form-label">Confirm email</label>
+                    </div>
+                    <div class="col-12 form-floating mt-4">
+                        <input type="password" id="password" class="form-control" placeholder="@example.com" required min-length="8">
+                        <label for="password" class="form-label">Password</label>
+                        <small class="text-start fw-bold">At least: 
+                            <ul>
+                                <li>1 Uppercase</li>
+                                <li>1 lowercase</li>
+                                <li>1 number</li>
+                                <li>1 special character(ex: @, #)</li>
+                                <li>8 characters long</li>
+                            </ul>
+                        </small>
+                    </div>
+                    
+                    <div class="col-12 form-floating mt-4">
+                        <input type="password" id="pwConfirm" class="form-control" placeholder="@example.com" required>
+                        <label for="pwConfirm" class="form-label">Confirm password</label>
+                    </div>
+                </div>
+                
+                <!--creating a separate form -->
+                <fieldset class="mt-4">
+                    <legend class="text-center">How did you hear about us?</legend>
+                    <ul id="choices">
+                       <li> <label> <input type="radio" id="school" name="hear" value="school">School</label> </li>
+                       <li><label><input type="radio" id="school" name="hear" value="school">Friend</label> </li>
+                       <li><label><input type="radio" id="school" name="hear" value="school">Work</label> </li>
+                       <li><label><input type="radio" id="school" name="hear" value="school">Nosing around?</label> </li>
+                       <li><label><input type="radio" id="school" name="hear" value="school">Social media</label> </li>
+                       <li><label><input type="radio" id="school" name="hear" value="school">It was destiny</label> </li>
+                       <li><label><input type="radio" id="school" name="hear" value="school">Other</label> </li>
+                       <input type="text" class="form-control" placeholder="If you choose 'Other' please specify because how?">
+                        <label><input type="radio" id="school" name="hear" value="school"><small class="fw-bold">Did the developer went to you insteasd?</small>
+                </ul>
+                </fieldset>
+                <div class="text-center">
+               <button type="submit" class="btn btn-success ">Join us!</button>
+            </div>
+            </form>
+           
+        </div>
     </main>
 
 

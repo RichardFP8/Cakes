@@ -46,8 +46,64 @@
         </nav>
     </header>
 
-    <main>
-        
+    <main class="mt-5">
+        <div class="container-fluid ">
+            <div class="row">
+                <!-- The left side of the page-->
+                <div class="col-sm-5 mt-5 border border-primary">
+                    <h1 class="text-center mt-5 display-6">Sign in</h1>
+
+                    <!--the sign in form-->
+                    <form action="confirm.html" method="get">
+                        <!--using nested rows because I feel safer with it but it is more diffuclt to understand the code's layout, at least for me-->
+                        <div class="row mt-5">
+                            <!--each input/label pair is going to take up the entire row in all breakpoints-->
+                            <div class="col-12 ">
+                                <label for="user" class="form-label">Email or Username</label>
+                                <input id="user" class="form-control border-success " type="text" required placeholder="hello" >
+                            </div>
+                            <div class="col-12">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" class="form-control border-success" required
+                                    placeholder="password">
+                            </div>
+                            <div class="col-12 mt-2">
+                                <form class="form-check">
+                                    <input type="checkbox" id="remember" class="form-check-input"> 
+                                <label class="form-check-label">Remember me</label>
+                                    
+                            </form>
+                            </div>
+                            
+                            
+                            <!-- I gave the button it's own <div> b/c it solved my problem of centering it within its side of the container and having the same max-width as the <input>;-->
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary mt-3 w-75">Sign in</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- additional pages-->
+                    <div class="row my-4">
+                        <div class="col-12 text-center mb-2">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <div class="col-12 text-center mb-2">
+                            <a href="#">Forgot your username?</a>
+                        </div>
+                        <div class="col-12 text-center border-blue my-2" >
+                            <button class="btn btn-secondary w-75"><a href="register.html">Create an account</a></button>
+                        </div>
+                    </div>
+
+                    <!--TODO: create the legals information-->
+                </div>
+
+            <!-- Right side-->
+            <div class="col-sm-7 border border-secondary">
+                <h2>Something else</h2>
+            </div>
+        </div>
+        </div>
     </main>
 
 

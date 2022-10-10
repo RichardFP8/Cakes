@@ -1,6 +1,7 @@
 body {
     background-image: url(../images/pattern.jpg);
     background-repeat: repeat;
+
 }
 small{
     font-size: 0.5em;
@@ -10,4 +11,14 @@ small{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+
+button a {
+    color: #fff;
+    font-weight: lighter;
+    
+}
+#choices {
+    list-style-type: none;
 }
