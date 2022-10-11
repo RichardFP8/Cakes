@@ -1,16 +1,26 @@
+*{
+    outline: red;
+    border: red;
+}
 body {
     background-image: url(../images/pattern.jpg);
     background-repeat: repeat;
-
+    margin: auto 0;
+}
+#home{
+    background-image: url(/images/bgimage.jpg);
+    background-repeat: no-repeat;
 }
 small{
     font-size: 0.5em;
 }
 .flexbox-container{
+    border: 1px solid #fff;
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    
 }
 
 
@@ -32,13 +42,36 @@ a:hover{
     text-decoration: underline;
 }
 
+div.carousel-item p a{
+    font-family:'Times New Roman', Times, serif;
+    color:chartreuse;
+    font-weight:bold;
+}
+
+.footer {
+    background: white;
+    color:#fff;
+}
+
+
 @media only screen and (max-width:576px) {
-    #information{
+    #information, #left, #right{
         display:none;
     }
 }
 @media only screen and (min-width: 768px){
     #information{
         display:none;
+    }
+   
+}
+@media only screen and (max-width:900px){
+    #loginRight{
+        display:none;
+    }
+}
+@media only screen and (max-width:900px){
+    #other{
+        width:100%
     }
 }

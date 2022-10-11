@@ -7,15 +7,16 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Home Page</title>
     <link type="text/css" rel="stylesheet" href="css/styles.css">
+
 </head>
 
-<body>
+<body id="home">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-primary " >
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-primary ">
             <div class="container">
                 <a class="navbar-brand" href="home.html">Your favorites</a>
 
-               
+
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,16 +44,230 @@
                 </div>
             </div>
         </nav>
-       
-    <hr >   
+
+        <hr>
     </header>
 
     <main>
+        <!--I want to take up the entire view port and use the sides for ads(why not?)-->
+        <div class="container-fluid">
+            <h1 class="mt-5 text-center display-3">Just a pastry store</h1>
 
-        <!--TODO: -->
-        <div class="pride"> </div>
-        <div class="what we offer"></div>
-        <div class="hear from others"></div>
+            <!--the main row-->
+            <div class="row mt-5">
+                <!--left side of the page: currently empty-->
+                <div class="col-sm-2" id="left">
+                    Check this out:
+                    
+                </div>
+
+                <!--the middle content-->
+                <div class="col">
+                    <h2 class="display-6 ">Good options</h2>
+                    <!--adding the first carousel; to the page-->
+                    <div id="firstCaro" class="carousel slide" data-bs-ride="carousel">
+
+                        <!--inserting the indicators for more touch(?)-->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#firstCaro" data-bs-slide-to="0" class="active"
+                                aria-label="Slide 1" aria-current="true"></button>
+                            <button type="button" data-bs-target="#firstCaro" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#firstCaro" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#firstCaro" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                        </div>
+
+                        <!--adding the actual images with caption because why not?-->
+                        <div class="carousel-inner ">
+                            <!--the first image-->
+                            <div class="carousel-item active">
+                                <img src="images/blueberrycheesecake.jpg" class="d-block w-100 "
+                                    alt="Blueberry Cheesecakes">
+                                <!--each caption has its own <div>-->
+                                <div class="carousel-caption ">
+                                    <h5 class="display-6 d-none d-md-block">Blueberry Cheesecakes</h5>
+                                    <p><a href="#">Into cheesecakes?</a></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="images/cranberrypie.jpg" class="d-block w-100" alt="Cranberry deliciousness">
+                                <div class="carousel-caption d-none d-md-block w-50 ms-auto">
+                                    <h5 class="display-6 ">Cranberry Pies</h5>
+                                    <p><a href="#">Shop here</a> </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="images/peachpie.jpg" class="d-block w-100" alt="">
+                                <div class="carousel-caption d-none d-md-block w-100 me-auto">
+                                    <h5 class="display-6 ">Peach Pies</h5>
+                                    <p><a href="#">Explore our many options</a> </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/christmasapplepie.jpg" class="d-block w-100" alt="Christmas pie">
+                                <div class="carousel-caption d-none d-md-block w-100 me-auto">
+                                    <h5 class="display-6 fw-bold">Christmas apple pies!</h5>
+                                    <p><a href="#">Shop for holidays!</a> </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--adding the next and previous arrows-->
+                        <button type="button" class="carousel-control-prev" data-bs-slide="prev"
+                            data-bs-target="#firstCaro">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Hello</span>
+                        </button>
+                        <button type="button" class="carousel-control-next" data-bs-slide="next"
+                            data-bs-target="#firstCaro">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Bye</span>
+                        </button>
+                    </div>
+                    <hr>
+                    <!--a quote, why not?-->
+                    <div class="bg-light border border-success rounded p-2">
+                        <h4><strong>Listen Up!</strong> Words of wisdom from our founder</h4>
+                        <q>I founded this company</q><cite>&lt;The Founder&gt;</cite>
+                    </div>
+                    <form>
+                        <h5>Found this inspirational? </h5>
+                        <label><input type="radio" name="short" id="yesSir" value="yesSir">Yes </label>
+                        <label><input type="radio" name="short" id="noSir" value="noSir">No</label>
+                        <button class="rounded" type="submit">Let us know!</button>
+                    </form>
+                    <hr>
+                    <!-- creating the hear about us section, using card components-->
+                    <div class="row my-4 border border-warning">
+                        <h2 class="text-center">Hear it from our customers</h2>
+                        <!--the first of 4 card components: per row-->
+                        <div class="col-6 col-sm-5 col-lg-3 ">
+                            <!--the actual card-->
+                            <div class="card border border-warning" style="width: 100%;">
+                                <img src="images/shrek.jpg" class="card-img-top" alt="">
+                                <div class="card-body"></div>
+                                <h5 class="card-title">Shrek</h5>
+                                <p class="card-text">options are insane</p>
+                                <a href="#" class="">Find what he's talking about</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-5 col-lg-3">
+                            <!--the actual card-->
+                            <div class="card" style="width: 100%;">
+                                <img src="images/panda.jpg" class="card-img-top" alt="">
+                                <div class="card-body"></div>
+                                <h5 class="card-title">Panda</h5>
+                                <p class="card-text">The Dragon warrior needs energy to fight his enemies. Here is where
+                                    I get it</p>
+                                <a href="#" class="">Find what he's talking about</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-5 col-lg-3">
+                            <!--the actual card-->
+                            <div class="card" style="width: 100%;">
+                                <img src="images/uzui.jpg" class="card-img-top img-fluid" height="12rem"
+                                    alt="Tengen Uzui">
+                                <div class="card-body"></div>
+                                <h5 class="card-title">Sound Hashira<em> Tengen Uzui</em></h5>
+                                <p class="card-text">Pastries are <em>flashy</em>. Could be flashier </p>
+                                <a href="#" class="">Find what he's talking about</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-5 col-lg-3">
+                            <!--the actual card-->
+                            <div class="card" style="width: 100%;">
+                                <img src="images/rengoku.jpg" class="card-img-top" alt="">
+                                <div class="card-body"></div>
+                                <h5 class="card-title">Flame Hashira<em> Kyojuro Rengoku</em></h5>
+                                <p class="card-text text-color-warning "><strong>UMAI!</strong></p>
+                                <a href="#" class="">Find what he's talking about</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-5 col-lg-3">
+                            <!--the actual card-->
+                            <div class="card" style="width: 100%;">
+                                <img src="images/shifu.jpg" class="card-img-top" alt="">
+                                <div class="card-body"></div>
+                                <h5 class="card-title">Master Shifu</h5>
+                                <p class="card-text">options are insane</p>
+                                <a href="#" class="">Find what he's talking about</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-5 col-lg-3">
+                            <!--the actual card-->
+                            <div class="card" style="width: 100%;">
+
+                                <img id="barney" src="images/barney.jpg" class="card-img-top" alt="">
+
+                                <div class="card-body"></div>
+                                <h5 class="card-title">Barney</h5>
+                                <p class="card-text">options are insane</p>
+                                <a href="#" class="">Find what he's talking about</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-5 col-lg-3">
+                            <!--the actual card-->
+                            <div class="card" style="width: 100%;">
+                                <img src="images/bob.jpg" class="card-img-top" alt="">
+                                <div class="card-body"></div>
+                                <h5 class="card-title">Bob</h5>
+                                <p class="card-text">options are insane</p>
+                                <a href="#" class="">Find what he's talking about</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-5 col-lg-3">
+                            <!--the actual card-->
+                            <div class="card" style="width: 100%rem;">
+                                <img src="images/oogway.jpg" class="card-img-top" alt="">
+                                <div class="card-body"></div>
+                                <h5 class="card-title">Master Oogway</h5>
+                                <p class="card-text">options are insane</p>
+                                <a href="#" class="">Find what he's talking about</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!--right side of page; TODO: some ads?-->
+                <div class="col-sm-2" id="right">hello</div>
+
+
+            </div>
+
+            <!--adding a footer-->
+            <div class="row  bg-dark">
+                <div class="col text-center">
+                    <table id="footer" class="table ">
+                        <thead id="header">
+                            <th style="color:aliceblue;">About US</th>
+                            <th style="color:aliceblue;">Talk $$$? Be a partner</th>
+                            <th style="color:aliceblue;">How we make $</th>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">Founder</a></td>
+                                <td><a href="#">Our Partners</a> </td>
+                                <td><a href="#">Finances</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">C-fleet</a></td>
+                                <td><a href="#">How to be a partner</a> </td>
+                                <td><a href="#"></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </div>
+                <h2 class="display-6 mb-5" style="color:azure;">&copy;Mine</h2>
+            </div>
+            
+        </div>
     </main>
 
 
