@@ -60,19 +60,210 @@
 
                 <!--the first "main" column-->
                 <div class="col-md-5 col-lg-4 order-md-last">
-                    <h4 class="mb-3">Redeem coupon</h4>
-                    <form class="card p-2">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Promo code">
-                            <button type="submit" class="btn btn-secondary">Redeem</button>
+                
+                    <div class="col">
+                        <h4 class="mb-3">Redeem coupon</h4>
+                        <form class="card p-2">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Promo code">
+                                <button type="submit" class="btn btn-secondary">Redeem</button>
+                            </div>
+                        </form>
+                    </div>
+                
+                    <!--attempted the horziontal card component; something tells me that this work cou'lve been shorter but we got it and no more touching it-->
+                    <div class="card mb-3 my-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4 col-sm-6 col-xl-6 ">
+                                <img src="images/strawberrycheesecake.jpg" class="img-fluid rounded-start" alt="Pumpkin pie">
+                            </div>
+                            <div class="col-4 col-sm-6 col-md-12 col-xl-12 order-sm-2 order-lg-3">
+                                <div class="card-body">
+                                     <h5 class="card-title"> <a href="#">Strawberry Cheesecake </a></h5>
+                                    <p class="card-text"><a href="#"><em>Exquisite.</em> Delicious. <strong>Cheap!</strong></a></p> 
+                                    <p></p>
+                                    <p class="card-text"><small class="text-muted">Last updated 10 mins ago</small></p>
+                                </div>
+                            </div>
+                            <div class="col-4 col-sm-6  col-xl-6 order-sm-1 order-lg-2">
+                                <div class="card-footer text-end">
+                                    <h6 >Price</h6>
+                                    <hr >
+                                    <h6>$12.50</h6>
+                                    <label for="amount" class="form-label">Quantity</label>
+                                    <select class="form-select w-50 ms-auto" id="amount" >
+                                    <option value="">1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                                </div>
+                            </div>
                         </div>
-                    </form>
+                    </div>
+
+
+
+
+                    <!--This was a testing card with a table within; it works. I think...-->
+                    <div class="card mb-3 my-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4 col-sm-6 col-xl-6 ">
+                                <img src="images/pumpkinpiesmall.jpg" class="img-fluid rounded-start" alt="Pumpkin pie">
+                            </div>
+                            <div class="col-4 col-sm-6 col-md-12 col-xl-12 order-sm-2 order-lg-3">
+                                <div class="card-body">
+                                     <h5 class="card-title"> <a href="#">Pumpkin Pie </a></h5>
+                                    <p class="card-text"><a href="#">12 piece pie and lots of calories</a></p> 
+                                    <p></p>
+                                    <p class="card-text"><small class="text-muted">Last updated 6 mins ago</small></p>
+                                </div>
+                            </div>
+                            
+                            <!--originally, there was an empty space between the small and medium breakpoints. I decided to add a fourth column and some queries to
+                            appear only between that space; I didn't use visibilty b/c I don't need it after or before that specified range-->
+                            <div class="col-sm-6 order-sm-4" id="information">
+                                
+                                <table class="table table-hover table-striped">     
+                                    <thead>
+                                        <tr>
+                                            <th>Ingredient</th>
+                                            <th>Risk</th>
+                                            <th>Percentage</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Apple</td>
+                                            <td>No</td>
+                                            <td>50%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Eggs</td>
+                                            <td>Yes</td>
+                                            <td>10%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nuts</td>
+                                            <td>IDK</td>
+                                            <td>&lt;0.1%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-4 col-sm-6  col-xl-6 order-sm-1 order-lg-2">
+                                <div class="card-footer text-end">
+                                    <h6 >Price</h6>
+                                    <hr >
+                                    <h6>$12.50</h6>
+                                    <label for="amount" class="form-label">Quantity</label>
+                                    <select class="form-select w-50 ms-auto" id="amount" >
+                                    <option value="">1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--the third product-->
+                    <div class="card mb-3 my-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4 col-sm-6 col-xl-6 ">
+                                <img src="images/cherrypie.jpg" class="img-fluid rounded-start" alt="Pumpkin pie">
+                            </div>
+                            <div class="col-4 col-sm-6 col-md-12 col-xl-12 order-sm-2 order-lg-3">
+                                <div class="card-body">
+                                     <h5 class="card-title"> <a href="#">Cherry Pie </a></h5>
+                                    <p class="card-text"><a href="#">Big pie for a big family <small>or one big appetite</small></a></p> 
+                                    <p></p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                            
+                            <!--originally, there was an empty space between the small and medium breakpoints. I decided to add a fourth column and some queries to
+                            appear only between that space; I didn't use visibilty b/c I don't need it after or before that specified range-->
+                            <div class="col-sm-6 order-sm-4" id="information">
+                                
+                                <table class="table">     
+                                    <thead>
+                                        <tr class="table-danger">
+                                            <th>Ingredient</th>
+                                            <th class="">Risk</th>
+                                            <th>Percentage</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-success">
+                                            <td>Apple</td>
+                                            <td>No</td>
+                                            <td>50%</td>
+                                        </tr>
+                                        <tr class="table-warning">
+                                            <td>Eggs</td>
+                                            <td>Yes</td>
+                                            <td>10%</td>
+                                        </tr>
+                                        <tr class="table-dark">
+                                            <td>Nuts</td>
+                                            <td>IDK</td>
+                                            <td>&lt;0.1%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-4 col-sm-6  col-xl-6 order-sm-1 order-lg-2">
+                                <div class="card-footer text-end">
+                                    <h6 >Price</h6>
+                                    <hr >
+                                    <h6>$12.50</h6>
+                                    <label for="amount" class="form-label">Quantity</label>
+                                    <select class="form-select w-50 ms-auto" id="amount" >
+                                    <option value="">1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr >
+
+                    <table class="display-6 table border-success table-dark">
+                        <tr>
+                        <td>Subtotal</td>
+                        <td>$32.50</td>
+                    </tr>
+                    <tr>
+                        <td>Taxes</td>
+                        <td>$6.75</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>$39.25</td>
+                    </tr>
+                    </table>
                 </div>
-
-                <!--TODO: use grid layout system and card components to create cart -->
-
-
-
+        
 
 
 
