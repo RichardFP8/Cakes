@@ -49,16 +49,31 @@
     </header>
 
     <main>
+        <!--using the jumbotron component from BS 4.0 and using it here with custom css-->
+        <!-- <div class="container-fluid jumbotron jumbotron-home py-5">
+            <div class="container">
+                <h1 class="display-3 d-none d-md-block text-white">Bethany's Pies. Delivered every week.</h1>
+            </div>
+        </div> -->
+
         <!--I want to take up the entire view port and use the sides for ads(why not?)-->
         <div class="container-fluid">
-            <h1 class="mt-5 text-center display-3">Just a pastry store</h1>
+           
+            <div class="container-fluid jumbotron jumbotron-home py-5">
+                <div class="container">
+                    <h1 class="display-3 d-none d-md-block text-white"></h1>
+                </div>
+            </div>
 
+            <h1 class="mt-5 text-center display-3">We chilling</h1>
             <!--the main row-->
             <div class="row mt-5">
-                <!--left side of the page: currently empty-->
+                <!--left side of the page; TODO: add more ads-->
                 <div class="col-sm-2" id="left">
-                    <a href="#"><h5>Check out this bakery</h5>
-                        <img src="images/carousel3.jpg" class="img-fluid"></a>
+                    <a href="#">
+                        <h5>Check out this bakery</h5>
+                        <img src="images/carousel3.jpg" class="img-fluid">
+                    </a>
                 </div>
 
                 <!--the middle content-->
@@ -129,10 +144,31 @@
                     </div>
                     <hr>
                     <!--a quote, why not?-->
-                    <div class="bg-light border border-success rounded p-2">
-                        <h4><strong>Listen Up!</strong> Words of wisdom from our founder</h4>
-                        <q>I founded this company</q><cite>&lt;The Founder&gt;</cite>
+
+                    <div class="row">
+                        <div class="col-lg-6 mt-3">
+                            <div class="bg-light border border-success rounded p-2">
+                                <h4><strong>Listen Up!<br> </bl></strong> Words of wisdom from our&nbsp;founder</h4>
+                                <q>I founded this company</q><cite>&lt;The Founder&gt;</cite>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5 class="text-center my-3">Our founder</h5>
+                            <div class="d-flex justify-content-center">
+                                <div class="spinner-border" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+
+                            </div>
+
+                            <strong class="d-flex justify-content-center">Loading...</strong>
+
+
+                        </div>
+
                     </div>
+                    <!--TODO: add the swirl component for "picture of founder"-->
+
                     <form>
                         <h5>Found this inspirational? </h5>
                         <label><input type="radio" name="short" id="yesSir" value="yesSir">Yes </label>
@@ -140,6 +176,22 @@
                         <button class="rounded" type="submit">Let us know!</button>
                     </form>
                     <hr>
+
+                    <div class="row">
+                        <h2>It all started...</h2>
+                        <div class="col-md-6">
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                officia deserunt mollit anim id est laborum</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                officia deserunt mollit anim id est laborum</p>
+                        </div>
+                    </div>
+                    <hr>
+
                     <!-- creating the hear about us section, using card components-->
                     <div class="row my-4 ">
                         <h2 class="text-center">Hear it from our customers</h2>
@@ -199,18 +251,6 @@
                         <div class="col-6 col-sm-5 col-lg-3">
                             <!--the actual card-->
                             <div class="card" style="width: 100%;">
-
-                                <img id="barney" src="images/barney.jpg" class="card-img-top" alt="">
-
-                                <div class="card-body"></div>
-                                <h5 class="card-title">Barney</h5>
-                                <p class="card-text"><q>I love food. You love food. So just come on down here and get some</q></p>
-                                <a href="#" class="">Cakes, Pies, Brownies. All</a>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-5 col-lg-3">
-                            <!--the actual card-->
-                            <div class="card" style="width: 100%;">
                                 <img src="images/bob.jpg" class="card-img-top" alt="">
                                 <div class="card-body"></div>
                                 <h5 class="card-title">Bob</h5>
@@ -228,13 +268,56 @@
                                 <a href="#" class="">Wise peach pies</a>
                             </div>
                         </div>
+                        <div class="col-6 col-sm-5 col-lg-3">
+                            <!--the actual card-->
+                            <div class="card" style="width: 100%;">
+
+                                <img id="barney" src="images/barney.jpg" class="card-img-top" alt="">
+
+                                <div class="card-body"></div>
+                                <h5 class="card-title">Barney</h5>
+                                <p class="card-text"><q>I love food. You love food. So just come on down here and get
+                                        some</q></p>
+                                <a href="#" class="">Cakes, Pies, Brownies. All</a>
+                            </div>
+                        </div>
                     </div>
 
 
                 </div>
 
                 <!--right side of page; TODO: some ads?-->
-                <div class="col-sm-2" id="right">hello</div>
+                <div class="col-sm-2" id="right">
+                    <div class="col-12">
+                        <h5 clas="text-center">Want to learn something new?</h5>
+                        <ul id="anotherFlex">
+                            <li><a href="https://app.pluralsight.com/id?_gl=1*gvqxir*_ga*MTI4ODE1MzUwNS4xNjY0OTMwNDg5*_ga_525M96C6Y1*MTY2NDkzMDQ4OC4xLjAuMTY2NDkzMDQ4OS4wLjAuMA..">
+                                <figure>
+                                    <img src="images\pluralsight.jpg " target="_blank" width="50%">
+                                    <figcaption>PluraSight</figcaption>
+                                </figure>
+                            </a> </li>
+                            <li><a href="https://www.freecodecamp.org/" target="_blank">
+                                <figure>
+                                    <img src="images\free.png" width="50%">
+                                    <figcaption>freeCodeCamp</figcaption>
+                                </figure>
+                            </a> </li>
+                            <li><a href="http://www.amazon.com/" target="_blank">
+                                <figure>
+                                    <img src="images\amazon.png " target="_blank" width="50%">
+                                    <figcaption>Amazon</figcaption>
+                                </figure>
+                            </a> </li>
+                            <li><a href="https://getbootstrap.com/docs/5.2/components/accordion/" target="_blank">
+                                <figure>
+                                    <img src="images\bs.jpg" width="50%">
+                                    <figcaption>Bootstrap</figcaption>
+                                </figure>
+                            </a> </li>
+                        </ul>
+                    </div>
+                </div>
 
 
             </div>
@@ -262,11 +345,11 @@
                             </tr>
                         </tbody>
                     </table>
-                    
+
                 </div>
                 <h2 class="display-6 mb-5" style="color:azure;">&copy;Mine</h2>
             </div>
-            
+
         </div>
     </main>
 

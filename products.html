@@ -9,7 +9,7 @@
     <link type="text/css" rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body id="productsPage">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-primary">
             <div class="container">
@@ -45,8 +45,8 @@
 
     <main>
         <div class="container mt-5">
-            <h1 class="text-center p-2 display-4">Testing, attention please</h1>
-            <h2 class="display-6 ms-3">Our Bestsellers</h2>
+            <h1 class="text-center p-2 display-4">You want 'em, we got 'em</h1>
+            <h2 class="display-6 my-3"><em>Enjoy : ) </em></h2>
 
 
             <!--The accordion will appear first; and then the grid layout will be inside-->
@@ -191,7 +191,7 @@
                                         <img src="images/strawberrycheesecake.jpg" class="card-img-top"
                                             alt="Lots of beries on top of a delicious cheesecake">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pumpkin pie</h5>
+                                            <h5 class="card-title">Strawberry Cheesecake</h5>
                                             <p>De-li-cious</p>
                                         </div>
                                         <div class="card-footer">
@@ -222,7 +222,7 @@
                                         <img src="images/blueberrycheesecake.jpg" class="card-img-top"
                                             alt="A swirl frost design and 3 layers of mouthful capuchino cake">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pumpkin pie</h5>
+                                            <h5 class="card-title">Blueberry Cheesecake</h5>
                                             <p>De-li-cious</p>
                                         </div>
                                         <div class="card-footer">
@@ -253,7 +253,7 @@
                                         <img src="images/strawberrycheesecake.jpg" class="card-img-top"
                                             alt="Pumkin pie">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pumpkin pie</h5>
+                                            <h5 class="card-title">Strawberry Cheesecake</h5>
                                             <p>De-li-cious</p>
                                         </div>
                                         <div class="card-footer">
@@ -285,119 +285,7 @@
                 </div>
 
 
-                <!--the third-->
-                <div class="accordion-item">
-                    <!--This is what would appear on the "line"; the text and the drop-down button wheen the content is closed/hidden-->
-                    <h2 class="accordion-header" id="theThird">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#donuts"
-                            aria-expanded="false" aria-controls="sec">Donuts</button>
-                    </h2>
-                    <div id="donuts" class="accordion-collapse collapse" aria-labelledby="theThird" data-bs-parent="mainAccordion">
-                        <div class="accordion-body">
-
-                            <!--using grid-layout; I want to have 3 card components in one row pass the medium breakpoint; 2 pass the small; stack below-->
-                            <div class="row">
-
-                                <div class="col-sm-6 col-md-4">
-                                    <!--the first card component within the accordion-->
-                                    <div class="card my-2">
-                                        <img src="images/donuts.jpg" class="card-img-top"
-                                            alt="Lots of beries on top of a delicious cheesecake">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Strawberry Donuts</h5>
-                                            <p>De-li-cious</p>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="row">
-                                                <div class="col-md-6 text-start">
-                                                    <h6 style="display:inline" class="ms-1">Quantity</h6>
-                                                    <label for="quantity" class="form-label"></label>
-                                                    <select class="form-select" id="quantity">
-                                                        <option value="">Choose...</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                        <option>6</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-6 mt-4 text-end">
-                                                    <button type="submit" class="btn btn-success text-right">Add to
-                                                        cart</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="card my-2">
-                                        <img src="images/donuts.jpg" class="card-img-top"
-                                            alt="A swirl frost design and 3 layers of mouthful capuchino cake">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Vanilla</h5>
-                                            <p>De-li-cious</p>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="row">
-                                                <div class="col text-start">
-                                                    <h6 style="display:inline" class="ms-1">Quantity</h6>
-                                                    <label for="quantity" class="form-label"></label>
-                                                    <select class="form-select" id="quantity">
-                                                        <option value="">Choose...</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                        <option>6</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-6 mt-4 text-end">
-                                                    <button type="submit" class="btn btn-success text-right">Add to
-                                                        cart</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="card my-2">
-                                        <img src="images/donuts.jpg" class="card-img-top"
-                                            alt="Pumkin pie">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Glazed Donuts</h5>
-                                            <p>De-li-cious</p>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="row">
-                                                <div class="col text-start">
-                                                    <h6 style="display:inline" class="ms-1">Quantity</h6>
-                                                    <label for="quantity" class="form-label"></label>
-                                                    <select class="form-select" id="quantity">
-                                                        <option value="">Choose...</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                        <option>6</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-6 mt-4 text-end">
-                                                    <button type="submit" class="btn btn-success text-right">Add to
-                                                        cart</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!--only one row-->
-                        </div><!--what else could there be in the body that I'd want to add-->
-                    </div>
-                </div>
-
-                <!--the fourth-->
+                <!--the third-->    
                 <div class="accordion-item">
                     <!--This is what would appear on the "line"; the text and the drop-down button wheen the content is closed/hidden-->
                     <h2 class="accordion-header" id="theFourth">
@@ -512,15 +400,16 @@
                 <div class="accordion-item">
                     <!--This is what would appear on the "line"; the text and the drop-down button wheen the content is closed/hidden-->
                     <h2 class="accordion-header" id="theFourth">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#brownies"
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#services"
                             aria-expanded="false" aria-controls="sec">Our services</button>
                     </h2>
-                    <div id="brownies" class="accordion-collapse collapse" aria-labelledby="theFourth" data-bs-parent="mainAccordion">
+                    <div id="services" class="accordion-collapse collapse" aria-labelledby="theFourth" data-bs-parent="mainAccordion">
                         <div class="accordion-body">
 
                             <!--using grid-layout; I want to have 3 card components in one row pass the medium breakpoint; 2 pass the small; stack below-->
                             <div class="row">
 
+                                
                                 <div class="col-sm-6 col-md-4">
                                     <!--the first card component within the accordion-->
                                     <div class="card my-2">
@@ -555,10 +444,10 @@
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="card my-2">
-                                        <img src="images/brownies.jpg" class="card-img-top"
+                                        <img src="images/customize.jpg" class="card-img-top"
                                             alt="A swirl frost design and 3 layers of mouthful capuchino cake">
                                         <div class="card-body">
-                                            <h5 class="card-title">Brownies with something else</h5>
+                                            <h5 class="card-title">Custome cakes</h5>
                                             <p>De-li-cious</p>
                                         </div>
                                         <div class="card-footer">
@@ -586,10 +475,10 @@
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="card my-2">
-                                        <img src="images/brownies.jpg" class="card-img-top"
+                                        <img src="images/global.jpg" class="card-img-top"
                                             alt="Pumkin pie">
                                         <div class="card-body">
-                                            <h5 class="card-title">Large brownies</h5>
+                                            <h5 class="card-title">International shipping</h5>
                                             <p>De-li-cious</p>
                                         </div>
                                         <div class="card-footer">
@@ -625,41 +514,41 @@
 
         </div>
 
-
-        <div class="container-fluid">
-            <div class="row  bg-dark">
-                <div class="col text-center">
-                    <table id="footer" class="table ">
-                        <thead id="header">
-                            <th style="color:aliceblue;">About US</th>
-                            <th style="color:aliceblue;">Talk $$$? Be a partner</th>
-                            <th style="color:aliceblue;">How we make $</th>
-
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="#">Founder</a></td>
-                                <td><a href="#">Our Partners</a> </td>
-                                <td><a href="#">Finances</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">C-fleet</a></td>
-                                <td><a href="#">How to be a partner</a> </td>
-                                <td><a href="#"></a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                </div>
-                <h2 class="display-6 mb-5" style="color:azure;">&copy;Mine</h2>
-            </div>
-        </div>
+        <!--TODOL Fix the layout of the footer-->
+        
 
         <!--separate row from the main content: is the footer-->
 
     </main>
    
+    <div class="container-fluid " >
+        <div class="row  bg-dark " >
+            <div class="col text-center">
+                <table id="footer" class="table ">
+                    <thead id="header">
+                        <th style="color:aliceblue;">About US</th>
+                        <th style="color:aliceblue;">Talk $$$? Be a partner</th>
+                        <th style="color:aliceblue;">How we make $</th>
 
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">Founder</a></td>
+                            <td><a href="#">Our Partners</a> </td>
+                            <td><a href="#">Finances</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">C-fleet</a></td>
+                            <td><a href="#">How to be a partner</a> </td>
+                            <td><a href="#"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+            <h2 class="display-6 mb-5" style="color:azure;">&copy;Mine</h2>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"

@@ -10,17 +10,18 @@ body {
 }
 /*adding styles to the checkout page*/
 #checkoutPage {
-    background: linear-gradient(90deg, #ff0000, #ffff00,orange);
+    background: linear-gradient(90deg, rgba(127,255,127,0.5),rgba(211, 211, 105, 0.6) ,rgba(255,127,127, 0.5) );
 }
 #registerPage{
-    background: linear-gradient(green, cyan)
+    background: linear-gradient(rgba(0,100,0,0.5),rgba(0,127,0,0.5), rgba(0,255,0,0.5))
 }
+
 
 small{
     font-size: 0.5em;
 }
 .flexbox-container{
-    border: 1px solid #fff;
+
     list-style-type: none;
     display: flex;
     justify-content: space-around;
@@ -75,6 +76,32 @@ div.carousel-item p a{
     color:#fff;
 }
 
+
+/*adding custom css properties for a jumbotron effect on the home page*/
+.jumbotron {
+    box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.1);
+    height: 40vh;
+    background-size: cover;
+  }
+
+/*insetingthe image that will show for the jumbotron effect*/
+.jumbotron-home{
+    background: url("../images/carousel3.jpg") repeat fixed;
+}
+
+/*changing the styles for the right side of the home page*/
+ul#anotherFlex li {
+    list-style-type: none;
+    margin-left: -1rem;
+}
+ul#anotherFlex li a{
+    color: yellowgreen;
+    font-family: monospace;
+    text-align: center;
+}
+ul#anotherFlex li a:hover{
+    color: rgba(127, 0, 0, 0.5);
+}
 
 @media only screen and (max-width:576px) {
     #information, #left, #right{
