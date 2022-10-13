@@ -9,7 +9,7 @@
     <link type="text/css" rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body id="registerPage">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-primary">
             <div class="container">
@@ -45,36 +45,41 @@
             </div>
         </nav>
     </header>
-    <hr >
+    <hr>
 
     <main>
         <div class="container mt-5 w-50">
             <h1 class="text-center">Create an account</h1>
-            <form >
+            <form>
                 <div class="row text-center">
                     <div class="col-sm-6 form-floating mb-4 ">
-                       <input type="text" class="form-control" id="first" placeholder="Hello">
-                       <label for="first" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="first" placeholder="Hello">
+                        <label for="first" class="form-label">First name</label>
                     </div>
-                    <div class="col-sm-6 form-floating">
+                    <div class="col-sm-6 form-floating mb-4">
                         <input type="text" class="form-control" id="last" placeholder="Bye">
                         <label for="last" class="form-label">Last name</label>
                     </div>
-                 
+
+                    <div class="col-12 form-floating mb-4">
+                        <input type="text" id="userName" class="form-control" placeholder="your user">
+                        <label for="userName" class="form-label"> Username</label>
+                    </div>
                     <div class="col-12 form-floating">
                         <input type="email" id="email" class="form-control" placeholder="@example.com">
                         <label for="email" class="form-label">Email</label>
-    
+
                     </div>
-                    
+
                     <div class="col-12 form-floating mt-4">
                         <input type="email" id="emailConfirm" class="form-control" placeholder="@example.com">
                         <label for="emailConfirm" class="form-label">Confirm email</label>
                     </div>
                     <div class="col-12 form-floating mt-4">
-                        <input type="password" id="password" class="form-control" placeholder="@example.com" required min-length="8">
+                        <input type="password" id="password" class="form-control" placeholder="@example.com" required
+                            min-length="8">
                         <label for="password" class="form-label">Password</label>
-                        <small class="text-start fw-bold">At least: 
+                        <small class="text-start fw-bold">At least:
                             <ul>
                                 <li>1 Uppercase</li>
                                 <li>1 lowercase</li>
@@ -84,59 +89,110 @@
                             </ul>
                         </small>
                     </div>
-                    
+
                     <div class="col-12 form-floating mt-4">
                         <input type="password" id="pwConfirm" class="form-control" placeholder="@example.com" required>
                         <label for="pwConfirm" class="form-label">Confirm password</label>
                     </div>
                 </div>
-                
+                <!--creating account types-->
+                <hr>
+                <fieldset>
+                    <h5 class="d-inline-block me-3">Account type:</h5>
+                    <label><input type="radio" name="accountType" value="per" checked>Personal </label>
+                    <label><input type="radio" name="accountType" value="bus">Business </label>
+                </fieldset>
+
+                <fieldset>
+                    <hr>
+                    <label class="form-label ">Upload a profile picture<span class="text-muted">(optional):</span></label>
+                    <input type="file" id="chooseFile" name="profilePic" value="chooseFile" class="form-control">
+                </fieldset>
+
                 <!--creating a separate form -->
                 <fieldset class="mt-4">
                     <legend class="text-center">How did you hear about us?</legend>
                     <ul id="choices">
-                       <li> <label> <input type="radio" id="school" name="hear" value="school">School</label> </li>
-                       <li><label><input type="radio" id="school" name="hear" value="school">Friend</label> </li>
-                       <li><label><input type="radio" id="school" name="hear" value="school">Work</label> </li>
-                       <li><label><input type="radio" id="school" name="hear" value="school">Nosing around?</label> </li>
-                       <li><label><input type="radio" id="school" name="hear" value="school">Social media</label> </li>
-                       <li><label><input type="radio" id="school" name="hear" value="school">It was destiny</label> </li>
-                       <li><label><input type="radio" id="school" name="hear" value="school">Other</label> </li>
-                       <input type="text" class="form-control" placeholder="If you choose 'Other' please specify because how?">
-                        <label><input type="radio" id="school" name="hear" value="school"><small class="fw-bold">Did the developer went to you insteasd?</small>
-                </ul>
+                        <li> <label> <input type="radio" id="school" name="hear" value="school">School</label> </li>
+                        <li><label><input type="radio" id="school" name="hear" value="school">Friend</label> </li>
+                        <li><label><input type="radio" id="school" name="hear" value="school">Work</label> </li>
+                        <li><label><input type="radio" id="school" name="hear" value="school">Nosing around?</label>
+                        </li>
+                        <li><label><input type="radio" id="school" name="hear" value="school">Social media</label> </li>
+                        <li><label><input type="radio" id="school" name="hear" value="school">It was destiny</label>
+                        </li>
+                        <li><label><input type="radio" id="school" name="hear" value="school">Our YouTube
+                                Channel</label> </li>
+                        <li><label><input type="radio" id="school" name="hear" value="school">News/Forums</label> </li>
+                        <li><label><input type="radio" id="school" name="hear" value="school">Other</label> </li>
+                        <input type="text" class="form-control" placeholder="If you choose 'Other' please specify ">
+                        <li><label><input type="radio" id="school" name="hear" value="school"><small class="fw-bold">Did
+                                    the developer went to you instead?</small></li> 
+                    </ul>
                 </fieldset>
-                <div class="text-center">
-               <button type="submit" class="btn btn-success ">Join us!</button>
-            </div>
-            </form>
-            
-            <div class="row  bg-dark">
-                <div class="col text-center">
-                    <table id="footer" class="table ">
-                        <thead id="header">
-                            <th style="color:aliceblue;">About US</th>
-                            <th style="color:aliceblue;">Talk $$$? Be a partner</th>
-                            <th style="color:aliceblue;">How we make $</th>
 
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="#">Founder</a></td>
-                                <td><a href="#">Our Partners</a> </td>
-                                <td><a href="#">Finances</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">C-fleet</a></td>
-                                <td><a href="#">How to be a partner</a> </td>
-                                <td><a href="#"></a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
+                <fieldset>
+                    <label class="form-label">Some bio:</label>
+                    <textarea placeholder="We chilling" rows="3" class="form-control"></textarea>
+                </fieldset>
+
+
+
+                <div class="col-12">
+                    <form>
+                        <div class="form-check">
+                            <input type="checkbox" id="remember" class="form-check-input" required>
+                            <label class="form-check-label" for="remember"> I accept the <a href="#" id="tac">Terms andConditions</a> </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="offers" class="form-check-input">
+                            <label for="offers" class="form-check-label">Keep me updated weekly</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="deals" class="form-check-input">
+                            <label for="deals" class="form-check-label">Send offers too?</label>
+                        </div>
+
+
+                    </form>
                 </div>
-                <h2 class="display-6 mb-5" style="color:azure;">&copy;Mine</h2>
+
+
+                <div class="text-center">
+
+                    <button type="submit" class="btn btn-success mb-4 ">Join us!</button>
+                </div>
+
+
+            </form>
+
+
+        </div>
+        <div class="row  bg-dark">
+            <div class="col text-center">
+                <table id="footer" class="table ">
+                    <thead id="header">
+                        <th style="color:aliceblue;">About US</th>
+                        <th style="color:aliceblue;">Talk $$$? Be a partner</th>
+                        <th style="color:aliceblue;">How we make $</th>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">Founder</a></td>
+                            <td><a href="#">Our Partners</a> </td>
+                            <td><a href="#">Finances</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">C-fleet</a></td>
+                            <td><a href="#">How to be a partner</a> </td>
+                            <td><a href="#"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
             </div>
+            <h2 class="display-6 mb-5" style="color:azure;">&copy;Mine</h2>
         </div>
     </main>
 

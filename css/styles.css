@@ -1,16 +1,21 @@
-*{
-    outline: red;
-    border: red;
-}
+
 body {
     background-image: url(../images/pattern.jpg);
     background-repeat: repeat;
     margin: auto 0;
 }
 #home{
-    background-image: url(/images/bgimage.jpg);
-    background-repeat: no-repeat;
+   background: linear-gradient(90deg, rgba(0,73,0,0.8), rgba(0,127,0,0.5), rgba(0,73,0,0.8));
+
 }
+/*adding styles to the checkout page*/
+#checkoutPage {
+    background: linear-gradient(90deg, #ff0000, #ffff00,orange);
+}
+#registerPage{
+    background: linear-gradient(green, cyan)
+}
+
 small{
     font-size: 0.5em;
 }
@@ -40,6 +45,23 @@ a:hover{
     font-weight: bold;
     color: cadetblue;
     text-decoration: underline;
+}
+/*adding some extra styles to the terms and condition link with #tac*/
+#tac{
+    color: #0000ff;
+}
+#tac:hover{
+    background: rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 20px 0 ;
+    
+}
+
+#chooseFile{
+    background: linear-gradient(black,grey);
+    color: rgb(255,255,255);
+}
+#chooseFile:hover{
+    box-shadow: 0 0 20px 10px;
 }
 
 div.carousel-item p a{
