@@ -1,3 +1,7 @@
+<!--For home page-->
+<!-- have lots of content(using lorem ipsum mochiron) hidden; the user will be able to scroll through them-->
+<!-- adding my won navbar too-->
+
 <!DOCTYPE html>
 <html>
 
@@ -12,39 +16,41 @@
 
 <body id="home">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-primary ">
+
+        <!-- adding the navbar; want it centered so I use container-->
+        <nav class="navbar navbar-expand-lg bg-light someNavbg fixed-top" mt-2>
             <div class="container">
-                <a class="navbar-brand" href="home.html">Ordinary people</a>
-
-
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand bitMore" href="home.html" id="justColor" >A business</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav"
+                    aria-controls="myNav" aria-expanded="false" aria-label="navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="nav navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="home.html">Home</a>
+                <div class="collapse navbar-collapse" id="myNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item" >
+                            <a class="nav-link active" aria-current="page" href="home.html" id="justColor">Main</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
+                            <a class="nav-link" href="login.html" id="justColor">Sign in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="register.html">Register</a>
+                            <a class="nav-link " href="register.html" id="justColor">Sign up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="products.html">Products</a>
+                            <a class="nav-link " href="products.html" id="justColor">Pastries</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="checkout.html">Checkout</a>
+                            <a class="nav-link " href="checkout.html" id="justColor">Cart</a>
                         </li>
                     </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-warning text-primary" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
-        </nav>
 
+        </nav>
         <hr>
     </header>
 
@@ -58,7 +64,7 @@
 
         <!--I want to take up the entire view port and use the sides for ads(why not?)-->
         <div class="container-fluid">
-           
+
             <div class="container-fluid jumbotron jumbotron-home py-5">
                 <div class="container">
                     <h1 class="display-3 d-none d-md-block text-white"></h1>
@@ -142,10 +148,88 @@
                             <span class="visually-hidden">Bye</span>
                         </button>
                     </div>
+
+                    <hr>
+                    <!--adding drop down options because we can-->
+
+
+
+                    <!-- .dropdown provides the position we need for our buttons and links within-->
+
+                    <div class="dropdown">
+
+                        <!--the first button with dropdown-->
+                        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Cakes</button>
+                        <!--using <ul> to create the list of links-->
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">Ice cream</a></li>
+                            <li><a href="#" class="dropdown-item">Capuchino</a></li>
+                            <li><a href="#" class="dropdown-item">Cheesecakes</a></li>
+                            <li><a href="#" class="dropdown-item">Fruit cakes</a></li>
+                            <li><a href="#" class="dropdown-item">Tres Leches</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="#">All</a> </li>
+                        </ul>
+
+
+                        <div class="btn-group">
+
+
+                            <button type="button" class="btn btn-warning">Pies</button>
+                            <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="visually-hidden">Something</span>
+                            </button>
+                            <!--using <ul> to create the list of links-->
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item">Peach</a></li>
+                                <li><a href="#" class="dropdown-item">Blueberry</a></li>
+                                <li><a href="#" class="dropdown-item">Apple</a></li>
+                                <li><a href="#" class="dropdown-item">Cranberry</a></li>
+                                <li><a href="#" class="dropdown-item">Cherry</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li class="dropdown-item"><a href="#">All</a> </li>
+                            </ul>
+
+                        </div>
+
+                        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">More</button>
+                        <!--using <ul> to create the list of links-->
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">Donuts</a></li>
+                            <li><a href="#" class="dropdown-item">Brownies</a></li>
+                            <li><a href="#" class="dropdown-item">Cupcakes</a></li>
+                            <li><a href="#" class="dropdown-item">Cookies</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="dropdown-item"><a href="#">And more!</a> </li>
+                        </ul>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <hr>
                     <!--a quote, why not?-->
 
-                    <div class="row">
+                    <div class="row" id="inspire">
                         <div class="col-lg-6 mt-3">
                             <div class="bg-light border border-success rounded p-2">
                                 <h4><strong>Listen Up!<br> </bl></strong> Words of wisdom from our&nbsp;founder</h4>
@@ -177,18 +261,64 @@
                     </form>
                     <hr>
 
+
+
+
+
+
+
+
+
+                    <!--instead of using just <p> within columns; I decided to use the scrollspy component to add more content and some fun-->
                     <div class="row">
-                        <h2>It all started...</h2>
-                        <div class="col-md-6">
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                officia deserunt mollit anim id est laborum</p>
+                        <!--has to be within a <nav>, a list or some set of links; here is <nav>-->
+                        <h2 class="text-center">Our story</h2>
+                        <div class="col-12">
+                            <nav id="story" class="navbar bg-dark rounded px-2 mb-2">
+                                <!--the left side of the navbar displayed part-->
+                                <a class="navbar-brand text-primary" href="#inspire">Once upon a time...</a>
+                                <!--the links in the navbar-->
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#chap1">Chapter 1</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#chap2">Chapter 2</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#chap3">Chapter 3</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                        <div class="col-md-6">
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                officia deserunt mollit anim id est laborum</p>
+
+                        <!--now the actual content that will correspond to its <a> for a scroll effect-->
+                        <div class="d-none d-lg-block">
+
+                            <div data-bs-spy="scroll" data-bs-target="story" data-bs-root-margin="0px 0px -40%"
+                                data-bs-smooth="true" class="theScroll bg-dark text-success rounded-2" tabindex="0">
+                                <h5 id="chap1">I got there early, except I was in the wrong place</h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo.</p>
+                                <h5 id="chap2">We waited for the products to ship. A week passed... a month...</h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo.</p>
+                                <h5 id="chap3">Customers,employees, and family happy. Work-life balance great. Then came
+                                    the envelope.</h5>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo.</p>
+                            </div>
                         </div>
+
+
+
+
+
+
+
                     </div>
                     <hr>
 
@@ -219,8 +349,7 @@
                         </div>
                         <div class="col-6 col-sm-5 col-lg-3">
                             <!--the actual card-->
-
-                            <div class="card" style="width: 100%;" id="promote">
+                            <div class="card" style="width: 100%;">
                                 <img src="images/uzui.jpg" class="card-img-top img-fluid" height="12rem"
                                     alt="Tengen Uzui">
                                 <div class="card-body"></div>
@@ -231,7 +360,7 @@
                         </div>
                         <div class="col-6 col-sm-5 col-lg-3">
                             <!--the actual card-->
-                            <div class="card" style="width: 100%;" id="promote">
+                            <div class="card" style="width: 100%;">
                                 <img src="images/rengoku.jpg" class="card-img-top" alt="">
                                 <div class="card-body"></div>
                                 <h5 class="card-title">Flame Hashira<em> Kyojuro Rengoku</em></h5>
@@ -292,34 +421,66 @@
                     <div class="col-12">
                         <h5 clas="text-center">Want to learn something new?</h5>
                         <ul id="anotherFlex">
-                            <li><a href="https://app.pluralsight.com/id?_gl=1*gvqxir*_ga*MTI4ODE1MzUwNS4xNjY0OTMwNDg5*_ga_525M96C6Y1*MTY2NDkzMDQ4OC4xLjAuMTY2NDkzMDQ4OS4wLjAuMA..">
-                                <figure>
-                                    <img src="images\pluralsight.jpg " target="_blank" width="50%">
-                                    <figcaption>PluralSight</figcaption>
-                                </figure>
-                            </a> </li>
+                            <li><a
+                                    href="https://app.pluralsight.com/id?_gl=1*gvqxir*_ga*MTI4ODE1MzUwNS4xNjY0OTMwNDg5*_ga_525M96C6Y1*MTY2NDkzMDQ4OC4xLjAuMTY2NDkzMDQ4OS4wLjAuMA..">
+                                    <figure>
+                                        <img src="images\pluralsight.jpg " target="_blank" width="50%">
+                                        <figcaption>PluralSight</figcaption>
+                                    </figure>
+                                </a> </li>
                             <li><a href="https://www.freecodecamp.org/" target="_blank">
-                                <figure>
-                                    <img src="images\free.png" width="50%">
-                                    <figcaption>freeCodeCamp</figcaption>
-                                </figure>
-                            </a> </li>
+                                    <figure>
+                                        <img src="images\free.png" width="50%">
+                                        <figcaption>freeCodeCamp</figcaption>
+                                    </figure>
+                                </a> </li>
                             <li><a href="http://www.amazon.com/" target="_blank">
-                                <figure>
-                                    <img src="images\amazon.png " target="_blank" width="50%">
-                                    <figcaption>Amazon</figcaption>
-                                </figure>
-                            </a> </li>
+                                    <figure>
+                                        <img src="images\amazon.png " target="_blank" width="50%">
+                                        <figcaption>Amazon</figcaption>
+                                    </figure>
+                                </a> </li>
                             <li><a href="https://getbootstrap.com/docs/5.2/components/accordion/" target="_blank">
-                                <figure>
-                                    <img src="images\bs.jpg" width="50%">
-                                    <figcaption>Bootstrap</figcaption>
-                                </figure>
-                            </a> </li>
+                                    <figure>
+                                        <img src="images\bs.jpg" width="50%">
+                                        <figcaption>Bootstrap</figcaption>
+                                    </figure>
+                                </a> </li>
                         </ul>
                     </div>
                 </div>
 
+
+            </div>
+
+            <!--adding the pagination component below all the main-->
+            <div class="row">
+                <nav aria-label="pageNavigation">
+                    <ul class="pagination  d-flex justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="login.html">Login</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="register.html">Register</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="products.html">Pastries</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="checkout.html">Payment</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
             </div>
 

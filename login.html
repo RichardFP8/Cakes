@@ -10,38 +10,39 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="home.html">Ordinary People  </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="nav navbar-nav mr-auto">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="home.html">Home</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="login.html">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="register.html">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="products.html">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="checkout.html">Checkout</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-lg bg-light someNavbg fixed-top" mt-2>
+        <div class="container">
+            <a class="navbar-brand" href="home.html">A business</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav"
+                aria-controls="myNav" aria-expanded="false" aria-label="navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Main</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="register.html">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="products.html">Pastries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="checkout.html">Cart</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-warning text-primary" type="submit">Search</button>
+                </form>
             </div>
-        </nav>
-    </header>
+        </div>
+
+    </nav>
 
     <main class="mt-5">
         <div class="container-fluid ">
@@ -89,7 +90,7 @@
                             <a href="#">Forgot your username?</a>
                         </div>
                         <div class="col-12 text-center border-blue my-2">
-                            <button class="btn btn-secondary w-75"><a href="register.html">Create an
+                            <button class="btn btn-warning w-75 "><a href="register.html" class="text-dark">Create an
                                     account</a></button>
                         </div>
                     </div>
@@ -97,8 +98,13 @@
                     <!--created a small flexbox container here-->
                     <div>
                         <ul class="flexbox-container px-2">
-                            <li>Terms and conditions</li>
-                            <li>Contact support</li>
+                            <li><button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                                    data-bs-target="#terms">Terms and Conditions</button></li>
+                            <li>
+                                <button type="submit" class="btn btn-sm btn-info" data-bs-toggle="popover"
+                                    data-bs-title="What, what now?"
+                                    data-bs-content="We don't got...yet...come back tomorrow.">Contact support</button>
+                            </li>
                             <li><strong>PRIVACY</strong></li>
                         </ul>
                     </div>
@@ -108,27 +114,112 @@
                 <!-- Right side-->
                 <div class="col-sm-7 " id="loginRight">
                     <!--attempting to use carousel for a slide of images of bakeries, why not?-->
-                        <h2 style="visibility:hidden;">hello</h2>
-                        <h2 class="display-6 text-center">Something to look forward to </h2>
-                        <h2 style="visibility:hidden;">hello</h2>
-                        <div id="bakeryCaro" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/bakery1.jpg" alt="A bakery" class="d-block w-100 ">
-                                </div>
-                                <div class="carousel-item ">
-                                    <img src="images/bakery2.jpg" alt="Another bakery" class="d-block w-100 ">
-                                </div>
-                                <div class="carousel-item ">
-                                    <img src="images/bakery3.jpg" alt="More bakeries" class="d-block w-100 img-rounded">
-                                </div>
+                    <h2 style="visibility:hidden;">hello</h2>
+                    <h2 class="display-6 text-center">Something to look forward to </h2>
+                    <h2 style="visibility:hidden;">hello</h2>
+                    <div id="bakeryCaro" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/bakery1.jpg" alt="A bakery" class="d-block w-100 ">
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="images/bakery2.jpg" alt="Another bakery" class="d-block w-100 ">
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="images/bakery3.jpg" alt="More bakeries" class="d-block w-100 img-rounded">
                             </div>
                         </div>
-                    
+                    </div>
+
                 </div>
-                
+
             </div>
 
+
+            <!--using the fade effect instead of the instant pop-->
+            <div class="modal fade" id="terms" tabindex="-1" aria-labelledby="termsModal" aria-hidden="true"
+                data-bs-backdrop="static" data-bs-keyboard="false">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="min-height: 3.5em;">
+                        <!--this can be <h1> since it is its own separate document-->
+                        <div class="modal-header">
+                            <h1 class="modal-title" id="termsModal"
+                                style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Terms
+                                and Conditions</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>You read all that?</h5>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                                voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                                occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
+                                mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et
+                                expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
+                                nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda
+                                est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut
+                                rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
+                                recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+                                voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+                                sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                                amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                                labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+                                nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                                consequatur</p>
+                            <h5></h5>
+                            <ul style="list-style-type: none; margin-left:-1em;">
+                                <li>
+                                    <input type="checkbox" id="accept" name="acceptTerms">
+                                    <label for="accept" name="" value="">You actually read all that</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="honest" name="acceptTerms">
+                                    <label for="honest" name="" value="">You lied about that</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="btn btn-light border border-info" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--added the pagination component-->
+            <div class="row">
+                <nav aria-label="pageNavigation">
+                    <ul class="pagination  d-flex justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="home.html">Home</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="register.html">Register</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="products.html">Pastries</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="checkout.html">Payment</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
 
             <div class="row mt-5 bg-dark">
                 <div class="col mt-1 text-center">

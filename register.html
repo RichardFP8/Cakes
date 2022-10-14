@@ -10,38 +10,39 @@
 </head>
 
 <body id="registerPage">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="home.html">Ordinary People</a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="nav navbar-nav mr-auto">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="home.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="register.html">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="products.html">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="checkout.html">Checkout</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-lg bg-light someNavbg fixed-top" mt-2>
+        <div class="container">
+            <a class="navbar-brand" href="home.html">A business</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav"
+                aria-controls="myNav" aria-expanded="false" aria-label="navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Main</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="register.html">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="products.html">Pastries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="checkout.html">Cart</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-warning text-primary" type="submit">Search</button>
+                </form>
             </div>
-        </nav>
-    </header>
+        </div>
+
+    </nav>
     <hr>
 
     <main>
@@ -102,7 +103,8 @@
 
                 <fieldset>
                     <hr>
-                    <label class="form-label ">Upload a profile picture<span class="text-muted">(optional):</span></label>
+                    <label class="form-label ">Upload a profile picture<span
+                            class="text-muted">(optional):</span></label>
                     <input type="file" id="chooseFile" name="profilePic" value="chooseFile" class="form-control">
                 </fieldset>
 
@@ -124,7 +126,7 @@
                         <li><label><input type="radio" id="school" name="hear" value="school">Other</label> </li>
                         <input type="text" class="form-control" placeholder="If you choose 'Other' please specify ">
                         <li><label><input type="radio" id="school" name="hear" value="school"><small class="fw-bold">Did
-                                    the developer went to you instead?</small></li> 
+                                    the developer went to you instead?</small></li>
                     </ul>
                 </fieldset>
 
@@ -139,7 +141,8 @@
                     <form>
                         <div class="form-check">
                             <input type="checkbox" id="remember" class="form-check-input" required>
-                            <label class="form-check-label" for="remember"> I accept the <a href="#" id="tac">Terms andConditions</a> </label>
+                            <label class="form-check-label" for="remember"> I accept the <a href="#" id="tac">Terms
+                                    andConditions</a> </label>
                         </div>
                         <div class="form-check">
                             <input type="checkbox" id="offers" class="form-check-input">
@@ -160,6 +163,35 @@
                     <button type="submit" class="btn btn-success mb-4 ">Join us!</button>
                 </div>
 
+                <div class="row">
+                    <nav aria-label="pageNavigation">
+                        <ul class="pagination  d-flex justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="home.html">Home</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="login.html">Login</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="products.html">Pastries</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="checkout.html">Payment</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
 
             </form>
 
