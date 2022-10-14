@@ -103,6 +103,14 @@ ul#anotherFlex li a:hover{
     color: rgba(127, 0, 0, 0.5);
 }
 
+/*adding properties to the scroll component; nevermind, failed attempt; abandon project*/
+theScroll{
+    overflow-y: scroll;
+    height:0.5em;
+}
+
+
+
 @media only screen and (max-width:576px) {
     #information, #left, #right{
         display:none;
@@ -121,6 +129,6 @@ ul#anotherFlex li a:hover{
 }
 @media only screen and (max-width:900px){
     #other{
-        width:100%
+        width:100%;
     }
 }
